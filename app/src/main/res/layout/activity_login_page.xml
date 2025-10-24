@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".authentication.login_page">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="224dp"
+        android:layout_height="100dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/wattle_logo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:id="@+id/textView_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to"
+            android:layout_marginEnd="6dp"
+            android:textSize="28dp" />
+
+
+        <TextView
+            android:id="@+id/textView_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANU Login"
+            android:textColor="#945F00"
+            android:textSize="28dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/loginpage_username_field"
+        android:layout_width="336dp"
+        android:layout_height="61dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/loginpage_password_field"
+        android:layout_width="336dp"
+        android:layout_height="61dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="false"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:paddingEnd="40dp"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/login_cancel_button"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="108dp"
+            android:layout_height="49dp"
+            android:background="@drawable/rounded_button_background_grey"
+            android:text="Cancel"
+            android:textColor="#ffffff"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/login_submit_button"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="107dp"
+            android:layout_height="49dp"
+            android:background="@drawable/rounded_button_background_gold"
+            android:text="Submit"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="66dp"
+        android:layout_marginBottom="6dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="#945f00"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:textStyle="bold"
+            android:textColor="#767676"
+            android:textSize="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:ignore="TextSizeCheck" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="#945f00"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="18dp"
+            android:gravity="center"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_signup_button"
+        android:layout_width="370dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/rounded_button_hollow_gold"
+        android:text="Create Account"
+        android:textColor="#945f00"
+        android:textSize="15dp"
+        tools:ignore="TextSizeCheck" />
+
+</LinearLayout>
+

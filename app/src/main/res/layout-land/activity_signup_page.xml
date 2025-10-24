@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    tools:context=".authentication.login_page"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical|start"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="10dp">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="224dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/wattle_logo" />
+
+        <TextView
+            android:id="@+id/textView_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/welcome_to"
+            android:textSize="28sp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+        android:id="@+id/textView_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/anu_sign_up"
+        android:layout_gravity="center"
+        android:textColor="#945F00"
+        android:textSize="28sp"
+        android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical|end"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="50dp">
+
+
+        <EditText
+            android:id="@+id/signupPage_email_field"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="text"
+            android:textSize="20sp"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/signupPage_password_field"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/signupPage_confirm_password_field"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/signupPage_cancel_button"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_button_background_grey"
+                android:text="@string/cancel"
+                android:textSize="20sp"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/signupPage_submit_button"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:background="@drawable/rounded_button_background_gold"
+                android:text="@string/submit"
+                android:textSize="20sp"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signupPage_signup_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_button_hollow_gold"
+            android:text="@string/sign_up"
+            android:textColor="#945f00"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
+
+

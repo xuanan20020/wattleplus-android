@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".p2p_messaging.direct_messages.directMessage_page">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardview_light_background"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:id="@+id/directMessage_toolbar"
+    tools:ignore="UselessParent">
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/go_back_image"
+        android:id="@+id/back_btn"
+        android:padding="5sp"
+        android:paddingStart="-5dp"
+        android:background="@color/cardview_light_background"
+        android:scaleType="fitCenter">
+    </ImageButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_id_placeholder"
+        android:id="@+id/directMessage_username_textfieid"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="12dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/wattle_logo" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/wattle_logo_image"
+        android:id="@+id/wattle_logo"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:layout_toEndOf="@id/back_btn"
+        android:contentDescription="@string/todo">
+    </ImageView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/directMessageBlockUserButton"
+        android:background="@drawable/rounded_button_hollow_gold"
+        android:text="Block"
+        android:textStyle="bold"
+        >
+
+    </Button>
+</RelativeLayout>
+
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/directMessage_toolbar"
+    android:layout_above="@id/directMessage_bottom_layout"
+    android:id="@+id/directMessagesRecyclerView">
+</androidx.recyclerview.widget.RecyclerView>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="80sp"
+    android:layout_alignParentBottom="true"
+    android:padding="8dp"
+    android:id="@+id/directMessage_bottom_layout">
+
+
+
+    <!--This is where the message to be sent will go-->
+    <EditText
+        android:id="@+id/send_message_textfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_toStartOf="@id/directMessage_send_msg_btn"
+        android:background="@drawable/custom_input"
+        android:hint="@string/message"
+        android:inputType=""
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <ImageButton
+        android:id="@+id/directMessage_send_msg_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:background="#00000000"
+        android:contentDescription="@string/send_message"
+        android:src="@drawable/icon_send_message"
+        app:tint="@color/wattle_gold">
+
+    </ImageButton>
+
+
+
+</RelativeLayout>
+
+</RelativeLayout>

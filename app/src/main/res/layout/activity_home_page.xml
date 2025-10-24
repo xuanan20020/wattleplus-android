@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_page">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:padding="10dp"
+        android:id="@+id/contacts_toolbar"
+        tools:ignore="MissingConstraints,UselessParent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/wattle_logo"
+            android:layout_toStartOf="@id/profile_image_button"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/wattle_logo_image"
+            android:id="@+id/wattle_logo"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/todo"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile_image"
+            android:id="@+id/profile_image_button"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:background="@color/white"
+            android:contentDescription="@string/todo"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/roundedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/cardview_outline">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#F2945f00">
+
+            <Button
+                android:id="@+id/navbar_home_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Home"
+                android:textColor="@color/cardview_light_background"
+                android:drawableStart="@drawable/home_image"
+                android:background="@drawable/outlined_button"
+                android:paddingEnd="40dp"
+                android:paddingStart="45dp" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff" />
+
+            <Button
+                android:id="@+id/navbar_search_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outlined_button"
+                android:drawableStart="@drawable/search_image"
+                android:paddingStart="29dp"
+                tools:ignore="RtlSymmetry" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff" />
+
+            <Button
+                android:id="@+id/navbar_contacts_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outlined_button"
+                android:drawableStart="@drawable/contacts_image"
+                android:paddingLeft="28dp"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff" />
+
+            <Button
+                android:id="@+id/navbar_settings_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outlined_button"
+                android:drawableStart="@drawable/settings_image"
+                android:paddingLeft="27dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="180dp"
+        android:text="My Courses:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contacts_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/roundedLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <ListView
+            android:id="@+id/customListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

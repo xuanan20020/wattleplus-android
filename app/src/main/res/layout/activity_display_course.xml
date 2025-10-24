@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".p2p_messaging.direct_messages.directMessage_page">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/directMessage_toolbar"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/cardview_light_background"
+            android:contentDescription="TODO"
+            android:padding="5sp"
+            android:paddingStart="-5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/go_back_image"
+            tools:ignore="TouchTargetSizeCheck">
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="courseNamePlacerholder2"
+            android:id="@+id/courseNameHolder"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/wattle_logo" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/wattle_logo_image"
+            android:id="@+id/wattle_logo"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:layout_toEndOf="@id/back_btn"
+            android:contentDescription="@string/todo">
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/directMessage_toolbar"
+        android:background="#F5EDDE">
+
+        <ImageView
+            android:id="@+id/courseImageID"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            app:srcCompat="@drawable/course_image" />
+
+        <TextView
+            android:id="@+id/courseNamePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/courseImageID"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Systems Design and Engineering"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="87dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/courseNamePlaceholder"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/course_code" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="131dp"
+            android:layout_height="34dp"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/unit_value" />
+
+        <TextView
+            android:id="@+id/courseCodePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/courseNamePlaceholder"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/imageView6"
+            android:text="COMP2310"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/unitValuePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/imageView7"
+            android:text="6"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
